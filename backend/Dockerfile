@@ -7,9 +7,13 @@ EXPOSE 3003
 
 FROM SystemOS 
 COPY './mongo_initial_script.js' /data/mongo_initial_script.js
+COPY './package.json' '/app/package.json'
+COPY './src/' '/app/src/'
 RUN mongod --bind_ip 0.0.0.0 & \
 	sleep 10 \
 	&& mongo --eval "load('/data/mongo_initial_script.js');" \
-	&& mongod --shutdown
+	&& mongod --shutdown \
+	&& cd app \
+	&& npm i
 
-CMD ["mongod", "--auth", "--bind_ip", "0.0.0.0"]
+CMD cd app && npm run prod & mongod --auth --bind_ip 0.0.0.0
