@@ -1,5 +1,3 @@
-import { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } from 'constants';
-
 const restful = require('node-restful');
 const mongoose = restful.mongoose;
 
