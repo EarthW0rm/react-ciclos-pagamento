@@ -18,7 +18,7 @@ module.exports = function(env) {
         , resolve:{
             extensions: ['.js', '.jsx', '.scss', '.css', '.html', 'jpg']
             , alias: {
-                modules: __dirname + '/node_modules'
+                mods: __dirname + '/node_modules'
             }
         }    
         , module: {
@@ -95,9 +95,9 @@ module.exports = function(env) {
                 }
             })
             , new webpack.ProvidePlugin({
-                $: 'modules/jquery/dist/jquery.js',
-                jQuery: 'modules/jquery/dist/jquery.js',
-                'window.jQuery': 'modules/jquery/dist/jquery.js'
+                $: 'mods/jquery/dist/jquery.js',
+                jQuery: 'mods/jquery/dist/jquery.js',
+                'window.jQuery': 'mods/jquery/dist/jquery.js'
             })
         ]
     }
