@@ -8,8 +8,9 @@ module.exports = function(env) {
         entry: './src/index.jsx'
         , output:{
             path: __dirname + '/dist'
-            , filename: './app.js'
+            , filename: './app-[hash].js'
         }
+        ,performance: { hints: false }
         ,devServer:{
             port: 81
             , contentBase: './dist'
@@ -81,7 +82,7 @@ module.exports = function(env) {
         }
         , plugins: [
             new ExtractTextPlugin({
-                filename: 'app.css'
+                filename: 'app-[hash].css'
                 , allChunks: true
             })
             , new HtmlWebPackPlugin({
@@ -92,6 +93,11 @@ module.exports = function(env) {
                 'process.env': {
                     'API_URL': JSON.stringify(env.API_URL)
                 }
+            })
+            , new webpack.ProvidePlugin({
+                $: 'modules/jquery/dist/jquery.js',
+                jQuery: 'modules/jquery/dist/jquery.js',
+                'window.jQuery': 'modules/jquery/dist/jquery.js'
             })
         ]
     }

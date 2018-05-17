@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "AGPL-3.0",
   "scripts": {
-    "dev": "webpack-dev-server --progress --env.API_URL=http://localhost:8080/api --colors --hot --open --mode development",
+    "start": "webpack-dev-server --progress --env.API_URL=http://localhost:8080/api --colors --hot --open --mode development",
+    "server": "webpack-dev-server --progress --env.API_URL=http://localhost:8080/api --colors --hot --open --mode production",
     "prod": "webpack --progress --env.API_URL=http://localhost:8080/api -p"
   },
   "peerDependencies": {
@@ -27,6 +28,7 @@
     "html-loader": "0.5.5",
     "html-webpack-plugin": "3.1.0",
     "ionicons": "3.0.0",
+    "jquery": "2.2.4",
     "lodash": "^4.17.10",
     "node-sass": "4.8.3",
     "react": "16.2.0",
