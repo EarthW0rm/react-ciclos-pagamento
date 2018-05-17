@@ -1,0 +1,68 @@
+.skin-purple{
+
+    & .main-header {
+
+        .navbar {
+            background-color: #605ca8;
+
+            .nav {
+
+                %menu-base{
+                    background: rgba(0, 0, 0, 0.1);
+                    color: #f6f6f6;
+                }
+
+                & > .active {
+                    & > a{
+                        @extend %menu-base;
+                    }
+                }
+
+                & .open,
+                & > li {
+                    & > a:hover,
+                    & > a:active,
+                    & > a:focus{
+                        @extend %menu-base;
+                    }
+
+                }
+                & > li {
+                    & > a{
+                        color: #ffffff;
+                    }
+                }
+
+            }
+
+            .sidebar-toggle{
+                color: #ffffff;
+
+                &:hover{
+                    @extend %menu-base;
+                    background-color: #555299;
+                }
+            }
+
+            @media (max-width: 767px) {
+                & .dropdown-menu {
+                    li {
+                        &.divider{
+                            background-color: rgba(255, 255, 255, 0.1);
+                        }
+                        a {
+                            color: #fff;
+                            &:hover{
+                                background: #555299;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}
