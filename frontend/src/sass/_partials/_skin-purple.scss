@@ -1,9 +1,20 @@
 .skin-purple{
 
+    $rgb-white: #fff;
+
+    $rgb-base-purple: #605ca8;
+    $rgb-middle-purple:#555299;
+    $rgb-dark-purple:#545096;
+
+    $rgb-light-gray:#999;
+    $rgb-middle-gray:#666;
+    $rgb-dark-gray:#374850;
+
+
     & .main-header {
 
         .navbar {
-            background-color: #605ca8;
+            background-color: $rgb-base-purple;
 
             .nav {
 
@@ -29,18 +40,18 @@
                 }
                 & > li {
                     & > a{
-                        color: #ffffff;
+                        color: rgb-white;
                     }
                 }
 
             }
 
             .sidebar-toggle{
-                color: #ffffff;
+                color: rgb-white;
 
                 &:hover{
                     @extend %menu-base;
-                    background-color: #555299;
+                    background-color: $rgb-middle-purple;
                 }
             }
 
@@ -51,9 +62,9 @@
                             background-color: rgba(255, 255, 255, 0.1);
                         }
                         a {
-                            color: #fff;
+                            color: rgb-white;
                             &:hover{
-                                background: #555299;
+                                background: $rgb-middle-purple;
                             }
                         }
                     }
@@ -61,6 +72,133 @@
                 }
             }
 
+        }
+
+        .logo {
+            background-color: $rgb-middle-purple;
+            color: rgb-white;
+            border-bottom: 0 solid transparent;
+
+            &:hover{
+                background-color: $rgb-dark-purple;
+            }
+        }
+
+        li {
+            &.user-header{
+                background-color: $rgb-base-purple;
+            }
+        }
+    }
+
+    & .content-header{
+        background: transparent;
+    }
+
+    & .wrapper,
+    & .main-sidebar,
+    & .left-side {
+        background-color: #222d32;
+    }
+
+    & .user-panel {
+        & > .info,
+        & > .info > a{
+            color: rgb-white;
+        }
+    }
+
+    & .sidebar-menu {
+        & > li{
+
+            &.header{
+                color: #4b646f;
+                background: #1a2226;
+            }
+            & > a{
+                border-left: 3px solid transparent;
+            }
+            &:hover,
+            &.active{
+                & > a{
+                    color: rgb-white;
+                    background: #1e282c;
+                    border-left-color: $rgb-base-purple;
+                }
+            }
+
+            & > .treeview-menu {
+                margin: 0 1px;
+                background: #2c3b41;
+            }
+        }
+    }
+
+    & .sidebar {
+        a {
+            color: #b8c7ce;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+    }
+
+    & .treeview-menu{
+        & > li{
+            & > a{
+                color: #8aa4af;
+                &:hover{
+                    color: rgb-white;
+                }
+            }
+
+            &.active > a{
+                color: rgb-white;
+            }            
+        }
+    }
+
+    & .sidebar-form{
+        border-radius: 3px;
+        border: 1px solid $rgb-dark-gray;
+        margin: 10px 10px;
+
+        %box-style {
+            box-shadow: none;
+            background-color: $rgb-dark-gray;
+            border: 1px solid transparent;
+            height: 35px;
+        }
+
+        & .btn {
+            @extend %box-style;
+        }
+
+        & input[type="text"]{
+            @extend %box-style;
+            color: $rgb-middle-gray;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 2px;
+
+            &:focus,
+            &:focus + .input-group-btn .btn{
+                background-color: rgb-white;
+                color: $rgb-middle-gray;
+            }
+            &:focus + .input-group-btn .btn{
+                border-left-color: rgb-white;
+            }
+
+        }
+        
+        .btn{
+            color: $rgb-light-gray;
+            border-top-left-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 0;
         }
 
     }
