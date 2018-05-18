@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../common/blocks/header';
+import SideBar from '../common/blocks/sidebar';
 
 export default class App extends Component {
 
@@ -8,7 +9,7 @@ export default class App extends Component {
         return(
             <div className="wrapper">
                 <Header />
-                <h1>Say hello to my little friend</h1>
+                <SideBar />
             </div>
         );
     }
