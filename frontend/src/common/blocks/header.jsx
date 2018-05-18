@@ -10,7 +10,7 @@ export default props => (
             </span>
         </a>
         <nav className="navbar navbar-static-top">
-            <a href className="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <a href="javascript:void(0);" className="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span className="sr-only">Expandir navegação</span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
