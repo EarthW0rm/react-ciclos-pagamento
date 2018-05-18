@@ -8,5 +8,6 @@ import 'mods/admin-lte/plugins/slimScroll/jquery.slimscroll';
 import 'mods/admin-lte/plugins/fastclick/fastclick.js';
 import './admin-lte-app';
 
-import '../sass/_partials/_admin-lte/_skin-purple';
+//import '../sass/_partials/_admin-lte/_skin-purple';
+import 'mods/admin-lte/dist/css/skins/_all-skins';
 
