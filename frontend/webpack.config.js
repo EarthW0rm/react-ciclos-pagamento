@@ -87,7 +87,8 @@ module.exports = function(env) {
             })
             , new HtmlWebPackPlugin({
                 template: "./src/index.html",
-                filename: "./index.html"
+                filename: "./index.html",
+                favicon: 'src/app-icon.ico',
             })
             , new webpack.DefinePlugin({
                 'process.env': {
