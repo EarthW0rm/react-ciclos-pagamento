@@ -17,7 +17,6 @@ export default class App extends Component {
                     <SideBar />
                     <div className="content-wrapper">
                         <section className="content">
-                            <h1>Say hello to my little friend!</h1>
                             <Routes />
                         </section>
                     </div>

@@ -2,8 +2,7 @@ FROM alpine:3.7 as SystemOS
 RUN mkdir -p /data/db /data/configdb \
 	&& apk add --no-cache mongodb \
 	&& apk add --no-cache nodejs nodejs-npm
-EXPOSE 27017
-EXPOSE 3003
+EXPOSE 8080
 
 FROM SystemOS 
 COPY './mongo_initial_script.js' /data/mongo_initial_script.js
