@@ -16,9 +16,7 @@ export default class App extends Component {
                     <Header />
                     <SideBar />
                     <div className="content-wrapper">
-                        <section className="content">
-                            <Routes />
-                        </section>
+                        <Routes />
                     </div>
                     <Footer />
                 </div>
